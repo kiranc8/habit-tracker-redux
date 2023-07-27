@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -9,7 +9,6 @@ import {
   List,
   ListItem,
 } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
 import BubbleChartIcon from "@mui/icons-material/BubbleChart";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HabitsList from "./HabitsList";
@@ -19,12 +18,6 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-
-  const navigate = useNavigate();
-
-  useEffect(()=>{
-    navigate('/dashboard');
-  },[navigate])
 
   const openModal = () => {
     setIsModalOpen(true);

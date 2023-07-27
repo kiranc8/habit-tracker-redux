@@ -8,7 +8,7 @@ import store from './redux/store';
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename='habit-tracker-redux/'>
           <Routes>
             {/* <Route exact path="/" element={<LandingPage />} /> */}
             <Route path="/" element={<Navbar/>}/>

@@ -9,12 +9,10 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div className="App">
           <Routes>
             {/* <Route exact path="/" element={<LandingPage />} /> */}
             <Route path="/" element={<Navbar/>}/>
           </Routes>
-        </div>
       </Router>
     </Provider>
   );

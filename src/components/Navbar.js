@@ -73,9 +73,6 @@ const Navbar = () => {
         </List>
       </SwipeableDrawer>
 
-      {/* Component to display the list of habits */}
-      <HabitsList />
-
       {/* Modal component to add a new habit */}
       <AddHabitModal isOpen={isModalOpen} onClose={closeModal} />
     </div>

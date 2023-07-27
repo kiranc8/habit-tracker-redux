@@ -13,6 +13,10 @@ The Habit Tracker App is a simple web application that allows users to track the
 
 Technologies used: HTML, CSS,JavaScript, Reactjs, MUI
 
+## Demo
+
+https://kiranc8.github.io/habit-tracker-redux/
+
 ## Getting Started
 
 ### Prerequisites

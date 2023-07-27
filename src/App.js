@@ -13,7 +13,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Router basename="habit-tracker-redux">
           <Routes>
-            <Route exact path="/" element={<LandingPage />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/dashboard" element={<Navbar />} />
           </Routes>
         </Router>

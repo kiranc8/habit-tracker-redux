@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Box, Button, Modal, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Modal,
+  TextField,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import { addHabit } from "../redux/actions";
@@ -12,6 +19,8 @@ const AddHabitModal = ({ isOpen, onClose }) => {
   const [open, setOpen] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
+
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -94,7 +103,7 @@ const AddHabitModal = ({ isOpen, onClose }) => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: 400,
+            width: isSmallScreen ? 300 : 400,
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,

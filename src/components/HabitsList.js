@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
@@ -8,7 +8,7 @@ import { updateHabitStatus } from "../redux/actions"; // Import the action and s
 import { DONE, NOT_DONE, NONE } from "../constants/habitStatus";
 
 const HabitsList = () => {
-  
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   // Get the list of habits from the Redux store
   const habits = useSelector((state) => state.habits);
   const dispatch = useDispatch();
@@ -47,9 +47,9 @@ const HabitsList = () => {
             border: "1px solid #ccc",
             borderRadius: 4,
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-            width: "90%",
-            marginTop: "25px",
-            marginBottom: "25px",
+            width: isSmallScreen ? "80%" : "90%",
+            marginTop: isSmallScreen ? "15px" : "25px",
+            marginBottom: isSmallScreen ? "15px" : "25px",
           }}
         >
           <Box
@@ -61,14 +61,18 @@ const HabitsList = () => {
             }}
           >
             {/* Display habit title */}
-            <Typography variant="h6" component="div" sx={{ marginRight: 1 }}>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ marginRight: 1, fontSize: isSmallScreen ? "14px" : "20px" }}
+            >
               {habit.title}
             </Typography>
             :{/* Display habit description */}
             <Typography
               variant="h6"
               color="textSecondary"
-              sx={{ marginLeft: 1 }}
+              sx={{ marginLeft: 1, fontSize: isSmallScreen ? "13px" : "18px" }}
             >
               {habit.description}
             </Typography>
@@ -102,7 +106,6 @@ const HabitsList = () => {
           </Box>
         </Box>
       ))}
-      
     </Box>
   );
 };

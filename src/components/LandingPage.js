@@ -43,7 +43,7 @@ const LandingPage = () => {
       <Typography variant="h3" component="h1" style={quoteStyle}>
         "The secret of getting ahead is getting started."
       </Typography>
-      
+
       {/* Display the "Get Started" button */}
       <Button
         variant="contained"

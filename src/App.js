@@ -11,7 +11,7 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Router basename="habit-tracker-redux/">
+        <Router basename="habit-tracker-redux">
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
             <Route path="/dashboard" element={<Navbar />} />

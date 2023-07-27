@@ -10,7 +10,7 @@ import {
   ListItem,
 } from "@mui/material";
 import BubbleChartIcon from "@mui/icons-material/BubbleChart";
-import AddIcon from "@mui/icons-material/Add";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HabitsList from "./HabitsList";
 import AddHabitModal from "./AddHabitModal";
 
@@ -49,7 +49,7 @@ const Navbar = () => {
               ☰
             </Button>
           ) : (
-            <Button startIcon={<AddIcon />} onClick={openModal} color="inherit">
+            <Button startIcon={<AddCircleIcon />} onClick={openModal} color="inherit">
               Add Habit
             </Button>
           )}
@@ -66,7 +66,7 @@ const Navbar = () => {
         <List>
           {/* Render "Add Habit" button in side menu */}
           <ListItem onClick={openModal}>
-            <Button startIcon={<AddIcon />} onClick={openModal} color="inherit">
+            <Button startIcon={<AddCircleIcon />} onClick={openModal} color="inherit">
               Add Habit
             </Button>
           </ListItem>

@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     navigate('/dashboard');
-  },[])
+  },[navigate])
 
   const openModal = () => {
     setIsModalOpen(true);

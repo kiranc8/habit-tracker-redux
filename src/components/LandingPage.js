@@ -3,6 +3,7 @@ import { Button, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   const root = {
     display: "flex",
     flexDirection: "column",
@@ -17,7 +18,6 @@ const LandingPage = () => {
     fontSize: "2rem",
     textAlign: "center"
   }
-    const navigate = useNavigate();
 
   const handleGetStarted = () => {
     navigate('/dashboard');
